@@ -2,43 +2,92 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>Starbucks Deep Link Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+  <title>Starbucks Deeplink Test</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif; padding: 16px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+        "Noto Sans KR", sans-serif;
+      padding: 24px;
+    }
+
     h1 {
       font-size: 20px;
-      margin: 32px 0 12px;
-      border-left: 4px solid #006241;
-      padding-left: 10px;
-      color: #006241;
+      margin: 24px 0 8px;
     }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
-    th, td {
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-bottom: 32px;
+    }
+
+    col.platform,
+    col.method {
+      width: 15%;
+    }
+
+    col.desc {
+      width: 50%;
+    }
+
+    col.test {
+      width: 20%;
+    }
+
+    th,
+    td {
       border: 1px solid #ddd;
       padding: 10px;
-      font-size: 13px;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: #f5f5f5;
       text-align: center;
+      font-weight: 600;
+    }
+
+    td.center {
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    .link {
       word-break: break-all;
+      color: #006241;
+      font-family: monospace;
+      font-size: 13px;
     }
-    th { background-color: #f4f4f4; }
-    a {
+
+    button {
       padding: 6px 12px;
-      background-color: #006241;
+      border: 1px solid #006241;
+      background: #006241;
       color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      display: inline-block;
+      border-radius: 4px;
+      cursor: pointer;
     }
-    .desc { text-align: left; }
+
+    button:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
-
 <body>
 
-<h1>로그인 페이지</h1>
+<h1>Starbucks App Deeplink Test Page</h1>
+
 <table>
+  <colgroup>
+    <col class="platform" />
+    <col class="method" />
+    <col class="desc" />
+    <col class="test" />
+  </colgroup>
+
   <tr>
     <th>플랫폼</th>
     <th>방식</th>
@@ -46,66 +95,97 @@
     <th>테스트</th>
   </tr>
 
-  <!-- Android -->
+  <!-- ================= ANDROID ================= -->
   <tr>
-    <td rowspan="2">Android</td>
-    <td>Custom Scheme</td>
-    <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
-    <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
-  </tr>
-  <tr>
-    <td>Dynamic Link</td>
-    <td class="desc">https://sbux.page.link/login</td>
-    <td><a href="https://sbux.page.link/login">실행</a></td>
+    <td class="center" rowspan="2">Android</td>
+    <td class="center">Custom Scheme</td>
+    <td>
+      <h1>로그인 페이지</h1>
+      <div class="link">starbuckskr://deeplink?main=LOGIN</div>
+
+      <h1>회원가입 페이지</h1>
+      <div class="link">starbuckskr://deeplink?main=JOIN</div>
+
+      <h1>홈 화면</h1>
+      <div class="link">starbuckskr://deeplink?main=HOME</div>
+
+      <h1>e-Frequency</h1>
+      <div class="link">starbuckskr://deeplink?main=EFREQUENCY</div>
+
+      <h1>리워드 메인</h1>
+      <div class="link">starbuckskr://deeplink?main=REWARDS</div>
+
+      <h1>사이렌 오더 메인</h1>
+      <div class="link">starbuckskr://deeplink?main=SIREN_ORDER</div>
+
+      <h1>매장 찾기</h1>
+      <div class="link">starbuckskr://deeplink?main=STORE_FIND</div>
+    </td>
+    <td class="center">
+      <button onclick="location.href='starbuckskr://deeplink?main=LOGIN'">실행</button>
+    </td>
   </tr>
 
-  <!-- iOS -->
   <tr>
-    <td rowspan="2">iOS</td>
-    <td>Custom Scheme</td>
-    <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
-    <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
-  </tr>
-  <tr>
-    <td>Dynamic Link</td>
-    <td class="desc">https://sbux.page.link/login</td>
-    <td><a href="https://sbux.page.link/login">실행</a></td>
-  </tr>
-</table>
-
-<h1>회원가입 페이지</h1>
-<table>
-  <tr>
-    <th>플랫폼</th>
-    <th>방식</th>
-    <th>설명</th>
-    <th>테스트</th>
+    <td class="center">Dynamic Link</td>
+    <td>
+      <h1>Dynamic Link (예시)</h1>
+      <div class="link">
+        https://starbucks.page.link/login  
+        <br />
+        → 내부에서 Custom Scheme 으로 변환
+      </div>
+    </td>
+    <td class="center">
+      <button onclick="location.href='https://starbucks.page.link/login'">
+        실행
+      </button>
+    </td>
   </tr>
 
-  <!-- Android -->
+  <!-- ================= iOS ================= -->
   <tr>
-    <td rowspan="2">Android</td>
-    <td>Custom Scheme</td>
-    <td class="desc">starbuckskr://deeplink?main=JOIN</td>
-    <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
-  </tr>
-  <tr>
-    <td>Dynamic Link</td>
-    <td class="desc">https://sbux.page.link/join</td>
-    <td><a href="https://sbux.page.link/join">실행</a></td>
+    <td class="center" rowspan="2">iOS</td>
+    <td class="center">Custom Scheme</td>
+    <td>
+      <h1>What's New 메인</h1>
+      <div class="link">starbuckskr://deeplink?main=WHATS_NEW</div>
+
+      <h1>Delivers 메인</h1>
+      <div class="link">starbuckskr://deeplink?main=ONDEMAND</div>
+
+      <h1>Buddy Pass</h1>
+      <div class="link">starbuckskr://deeplink?main=SUBSCRIPTION</div>
+
+      <h1>카드 메인</h1>
+      <div class="link">starbuckskr://deeplink?main=CARD</div>
+
+      <h1>Pay &gt; Coupon</h1>
+      <div class="link">starbuckskr://deeplink?main=ECOUPON</div>
+
+      <h1>선물하기</h1>
+      <div class="link">starbuckskr://deeplink?main=EGIFT_CARD_PRESENT</div>
+    </td>
+    <td class="center">
+      <button onclick="location.href='starbuckskr://deeplink?main=CARD'">실행</button>
+    </td>
   </tr>
 
-  <!-- iOS -->
   <tr>
-    <td rowspan="2">iOS</td>
-    <td>Custom Scheme</td>
-    <td class="desc">starbuckskr://deeplink?main=JOIN</td>
-    <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
-  </tr>
-  <tr>
-    <td>Dynamic Link</td>
-    <td class="desc">https://sbux.page.link/join</td>
-    <td><a href="https://sbux.page.link/join">실행</a></td>
+    <td class="center">Dynamic Link</td>
+    <td>
+      <h1>Universal / Dynamic Link (예시)</h1>
+      <div class="link">
+        https://starbucks.page.link/card  
+        <br />
+        → 앱 설치 여부에 따라 App Store / 앱 실행
+      </div>
+    </td>
+    <td class="center">
+      <button onclick="location.href='https://starbucks.page.link/card'">
+        실행
+      </button>
+    </td>
   </tr>
 </table>
 

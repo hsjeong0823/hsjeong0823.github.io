@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>Starbucks Deep Link Test</title>
+  <title>Starbucks KR Deep Link Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <style>
@@ -12,7 +12,7 @@
     }
     h1 {
       font-size: 20px;
-      margin-top: 32px;
+      margin-top: 36px;
       border-left: 4px solid #006241;
       padding-left: 10px;
       color: #006241;
@@ -40,129 +40,19 @@
       text-decoration: none;
       border-radius: 6px;
     }
-    a:hover {
-      opacity: 0.85;
-    }
-    .platform {
-      font-weight: bold;
-      width: 80px;
-    }
-    .desc {
-      text-align: left;
-    }
+    a:hover { opacity: 0.85; }
+    .platform { font-weight: bold; width: 80px; }
+    .desc { text-align: left; }
   </style>
 </head>
 
 <body>
 
+<!-- 공통 테이블 템플릿 -->
+<!-- Android / iOS Custom Scheme -->
+
 <h1>로그인 페이지</h1>
 <table>
-  <tr>
-    <th>플랫폼</th>
-    <th>설명</th>
-    <th>실행</th>
-  </tr>
-  <tr>
-    <td class="platform">Android</td>
-    <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
-    <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
-  </tr>
-  <tr>
-    <td class="platform">iOS</td>
-    <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
-    <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
-  </tr>
-</table>
-
-<h1>회원가입 페이지</h1>
-<table>
-  <tr>
-    <th>플랫폼</th>
-    <th>설명</th>
-    <th>실행</th>
-  </tr>
-  <tr>
-    <td class="platform">Android</td>
-    <td class="desc">starbuckskr://deeplink?main=JOIN</td>
-    <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
-  </tr>
-  <tr>
-    <td class="platform">iOS</td>
-    <td class="desc">starbuckskr://deeplink?main=JOIN</td>
-    <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
-  </tr>
-</table>
-
-<h1>홈 화면</h1>
-<table>
-  <tr>
-    <th>플랫폼</th>
-    <th>설명</th>
-    <th>실행</th>
-  </tr>
-  <tr>
-    <td class="platform">Android</td>
-    <td class="desc">starbuckskr://deeplink?main=HOME</td>
-    <td><a href="starbuckskr://deeplink?main=HOME">실행</a></td>
-  </tr>
-  <tr>
-    <td class="platform">iOS</td>
-    <td class="desc">starbuckskr://deeplink?main=HOME</td>
-    <td><a href="starbuckskr://deeplink?main=HOME">실행</a></td>
-  </tr>
-</table>
-
-<h1>e-Frequency</h1>
-<table>
-  <tr>
-    <th>플랫폼</th>
-    <th>설명</th>
-    <th>실행</th>
-  </tr>
-  <tr>
-    <td class="platform">Android</td>
-    <td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td>
-    <td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td>
-  </tr>
-  <tr>
-    <td class="platform">iOS</td>
-    <td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td>
-    <td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td>
-  </tr>
-</table>
-
-<h1>스티커 선물하기</h1>
-<table>
-  <tr>
-    <th>플랫폼</th>
-    <th>설명</th>
-    <th>실행</th>
-  </tr>
-  <tr>
-    <td class="platform">Android</td>
-    <td class="desc">
-      starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT&historyKey=[encrypted]&status=[value]
-    </td>
-    <td>
-      <a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT&historyKey=test&status=test">
-        실행
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td class="platform">iOS</td>
-    <td class="desc">
-      starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT&historyKey=[encrypted]&status=[value]
-    </td>
-    <td>
-      <a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT&historyKey=test&status=test">
-        실행
-      </a>
-    </td>
-  </tr>
-</table>
-
-<!-- 동일 패턴으로 아래 딥링크들 계속 추가 가능 -->
-
-</body>
-</html>
+<tr><th>플랫폼</th><th>설명</th><th>실행</th></tr>
+<tr><td class="platform">Android</td><td class="desc">starbuckskr://deeplink?main=LOGIN</td><td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td></tr>
+<tr><td class="platform">iOS</td><td class="desc">starbuckskr://deeplink?main=LOGIN</td><td><a href="sta

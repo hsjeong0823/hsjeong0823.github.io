@@ -1,123 +1,457 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif; padding: 16px; }
-    h1 { font-size: 18px; margin: 40px 0 10px; border-left: 4px solid #006241; padding-left: 10px; color: #006241; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; table-layout: fixed; }
-    col.platform { width: 15%; }
-    col.method { width: 15%; }
-    col.desc { width: 55%; }
-    col.test { width: 15%; }
-    th, td { border: 1px solid #ddd; padding: 10px; font-size: 13px; text-align: center; word-break: break-all; }
-    th { background-color: #f4f4f4; }
-    td.desc { text-align: left; }
-    a { padding: 6px 12px; background-color: #006241; color: #fff; text-decoration: none; border-radius: 6px; display: inline-block; font-size: 12px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            padding: 16px;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin: 40px 0 10px;
+            border-left: 4px solid #006241;
+            padding-left: 10px;
+            color: #006241;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            table-layout: fixed;
+        }
+
+        col.platform {
+            width: 15%;
+        }
+
+        col.method {
+            width: 15%;
+        }
+
+        col.desc {
+            width: 55%;
+        }
+
+        col.test {
+            width: 15%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 13px;
+            text-align: center;
+            word-break: break-all;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        td.desc {
+            text-align: left;
+        }
+
+        a {
+            padding: 6px 12px;
+            background-color: #006241;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            display: inline-block;
+            font-size: 12px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>로그인 페이지</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=LOGIN</td><td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/login</td><td><a href="https://sbux.page.link/login">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=LOGIN</td><td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/login</td><td><a href="https://sbux.page.link/login">실행</a></td></tr>
-</table>
+    <h1>로그인 페이지</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
+            <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/login</td>
+            <td><a href="https://sbux.page.link/login">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=LOGIN</td>
+            <td><a href="starbuckskr://deeplink?main=LOGIN">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/login</td>
+            <td><a href="https://sbux.page.link/login">실행</a></td>
+        </tr>
+    </table>
 
-<h1>회원가입 페이지</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=JOIN</td><td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/join</td><td><a href="https://sbux.page.link/join">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=JOIN</td><td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/join</td><td><a href="https://sbux.page.link/join">실행</a></td></tr>
-</table>
+    <h1>회원가입 페이지</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=JOIN</td>
+            <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/join</td>
+            <td><a href="https://sbux.page.link/join">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=JOIN</td>
+            <td><a href="starbuckskr://deeplink?main=JOIN">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/join</td>
+            <td><a href="https://sbux.page.link/join">실행</a></td>
+        </tr>
+    </table>
 
-<h1>Digital Lucky Draw</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW</td><td><a href="starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/luckydraw</td><td><a href="https://sbux.page.link/luckydraw">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW</td><td><a href="starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/luckydraw</td><td><a href="https://sbux.page.link/luckydraw">실행</a></td></tr>
-</table>
+    <h1>Digital Lucky Draw</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW</td>
+            <td><a href="intent://deeplink?main=DIGITAL_LUCKY_DRAW#Intent;scheme=starbuckskr;package=com.starbucks.co;end">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/luckydraw</td>
+            <td><a href="https://starbuckskr.page.link/?link=https%3a%2f%2fwww.istarbucks.co.kr%3fstarbuckskr%3a%2f%2fdeeplink%3fmain%3dDIGITAL_LUCKY_DRAW&amp;apn=com.starbucks.co&amp;isi=466682252&amp;ibi=com.starbucks.starbucksKR">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW</td>
+            <td><a href="starbuckskr://deeplink?main=DIGITAL_LUCKY_DRAW">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link<br>(INHOUSE)</td>
+            <td class="desc">https://sbux.page.link/luckydraw</td>
+            <td><a href="https://starbuckskr.page.link/?link=https%3a%2f%2fwww.istarbucks.co.kr%3fstarbuckskr%3a%2f%2fdeeplink%3fmain%3dDIGITAL_LUCKY_DRAW&amp;apn=com.starbucks.co&amp;isi=466682252&amp;ibi=com.starbucks.inhouse">실행</a></td>
+        </tr>
+    </table>
 
-<h1>홈 화면</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=HOME</td><td><a href="starbuckskr://deeplink?main=HOME">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/home</td><td><a href="https://sbux.page.link/home">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=HOME</td><td><a href="starbuckskr://deeplink?main=HOME">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/home</td><td><a href="https://sbux.page.link/home">실행</a></td></tr>
-</table>
+    <h1>홈 화면</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=HOME</td>
+            <td><a href="starbuckskr://deeplink?main=HOME">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/home</td>
+            <td><a href="https://sbux.page.link/home">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=HOME</td>
+            <td><a href="starbuckskr://deeplink?main=HOME">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/home</td>
+            <td><a href="https://sbux.page.link/home">실행</a></td>
+        </tr>
+    </table>
 
-<h1>e-Frequency</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td><td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/efreq</td><td><a href="https://sbux.page.link/efreq">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td><td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/efreq</td><td><a href="https://sbux.page.link/efreq">실행</a></td></tr>
-</table>
+    <h1>e-Frequency</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td>
+            <td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/efreq</td>
+            <td><a href="https://sbux.page.link/efreq">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=EFREQUENCY</td>
+            <td><a href="starbuckskr://deeplink?main=EFREQUENCY">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/efreq</td>
+            <td><a href="https://sbux.page.link/efreq">실행</a></td>
+        </tr>
+    </table>
 
-<h1>스티커 선물하기</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT</td><td><a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/sticker_gift</td><td><a href="https://sbux.page.link/sticker_gift">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT</td><td><a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/sticker_gift</td><td><a href="https://sbux.page.link/sticker_gift">실행</a></td></tr>
-</table>
+    <h1>스티커 선물하기</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT</td>
+            <td><a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/sticker_gift</td>
+            <td><a href="https://sbux.page.link/sticker_gift">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT</td>
+            <td><a href="starbuckskr://deeplink?main=EFREQUENCY&sub=STICKER_PRESENT">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/sticker_gift</td>
+            <td><a href="https://sbux.page.link/sticker_gift">실행</a></td>
+        </tr>
+    </table>
 
-<h1>리워드 메인 화면</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=REWARDS</td><td><a href="starbuckskr://deeplink?main=REWARDS">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/rewards</td><td><a href="https://sbux.page.link/rewards">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=REWARDS</td><td><a href="starbuckskr://deeplink?main=REWARDS">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/rewards</td><td><a href="https://sbux.page.link/rewards">실행</a></td></tr>
-</table>
+    <h1>리워드 메인 화면</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=REWARDS</td>
+            <td><a href="starbuckskr://deeplink?main=REWARDS">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/rewards</td>
+            <td><a href="https://sbux.page.link/rewards">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=REWARDS</td>
+            <td><a href="starbuckskr://deeplink?main=REWARDS">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/rewards</td>
+            <td><a href="https://sbux.page.link/rewards">실행</a></td>
+        </tr>
+    </table>
 
-<h1>리워드 히스토리 화면</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=REWARDS&sub=HISTORY</td><td><a href="starbuckskr://deeplink?main=REWARDS&sub=HISTORY">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/reward_history</td><td><a href="https://sbux.page.link/reward_history">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=REWARDS&sub=HISTORY</td><td><a href="starbuckskr://deeplink?main=REWARDS&sub=HISTORY">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/reward_history</td><td><a href="https://sbux.page.link/reward_history">실행</a></td></tr>
-</table>
+    <h1>리워드 히스토리 화면</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=REWARDS&sub=HISTORY</td>
+            <td><a href="starbuckskr://deeplink?main=REWARDS&sub=HISTORY">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/reward_history</td>
+            <td><a href="https://sbux.page.link/reward_history">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=REWARDS&sub=HISTORY</td>
+            <td><a href="starbuckskr://deeplink?main=REWARDS&sub=HISTORY">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/reward_history</td>
+            <td><a href="https://sbux.page.link/reward_history">실행</a></td>
+        </tr>
+    </table>
 
-<h1>What's New 메인 페이지</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=WHATS_NEW</td><td><a href="starbuckskr://deeplink?main=WHATS_NEW">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/whatsnew</td><td><a href="https://sbux.page.link/whatsnew">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=WHATS_NEW</td><td><a href="starbuckskr://deeplink?main=WHATS_NEW">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/whatsnew</td><td><a href="https://sbux.page.link/whatsnew">실행</a></td></tr>
-</table>
+    <h1>What's New 메인 페이지</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=WHATS_NEW</td>
+            <td><a href="starbuckskr://deeplink?main=WHATS_NEW">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/whatsnew</td>
+            <td><a href="https://sbux.page.link/whatsnew">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=WHATS_NEW</td>
+            <td><a href="starbuckskr://deeplink?main=WHATS_NEW">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/whatsnew</td>
+            <td><a href="https://sbux.page.link/whatsnew">실행</a></td>
+        </tr>
+    </table>
 
-<h1>상세화면 (What's New)</h1>
-<table>
-  <colgroup><col class="platform"><col class="method"><col class="desc"><col class="test"></colgroup>
-  <tr><th>플랫폼</th><th>방식</th><th>설명</th><th>테스트</th></tr>
-  <tr><td rowspan="2">Android</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL</td><td><a href="starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/whatsnew_detail</td><td><a href="https://sbux.page.link/whatsnew_detail">실행</a></td></tr>
-  <tr><td rowspan="2">iOS</td><td>Custom Scheme</td><td class="desc">starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL</td><td><a href="starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL">실행</a></td></tr>
-  <tr><td>Dynamic Link</td><td class="desc">https://sbux.page.link/whatsnew_detail</td><td><a href="https://sbux.page.link/whatsnew_detail">실행</a></td></tr>
-</table>
+    <h1>상세화면 (What's New)</h1>
+    <table>
+        <colgroup>
+            <col class="platform">
+            <col class="method">
+            <col class="desc">
+            <col class="test">
+        </colgroup>
+        <tr>
+            <th>플랫폼</th>
+            <th>방식</th>
+            <th>설명</th>
+            <th>테스트</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Android</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL</td>
+            <td><a href="starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/whatsnew_detail</td>
+            <td><a href="https://sbux.page.link/whatsnew_detail">실행</a></td>
+        </tr>
+        <tr>
+            <td rowspan="2">iOS</td>
+            <td>Custom Scheme</td>
+            <td class="desc">starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL</td>
+            <td><a href="starbuckskr://deeplink?main=WHATS_NEW&sub=DETAIL">실행</a></td>
+        </tr>
+        <tr>
+            <td>Dynamic Link</td>
+            <td class="desc">https://sbux.page.link/whatsnew_detail</td>
+            <td><a href="https://sbux.page.link/whatsnew_detail">실행</a></td>
+        </tr>
+    </table>
 
 </body>
+
 </html>
